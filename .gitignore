@@ -1,0 +1,66 @@
+# Environment variables - NEVER commit these!
+.env
+.env.local
+.env.*.local
+
+# Configuration files with sensitive data
+config/config.yaml
+config/config.yml
+config/*.local.yaml
+config/*.local.yml
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+venv/
+env/
+ENV/
+
+# Results and logs - contains potentially sensitive data
+results/
+*.log
+*.json
+!config/*.example.json
+!examples/**/*.json
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+
+# Testing
+.pytest_cache/
+.coverage
+htmlcov/
+
+# Backup files
+*.bak
+*.backup
+*~
+
+# Deletion plans with actual data
+deletion_plan.json
+*_deletion_*.json
+!examples/**/sample_*.json

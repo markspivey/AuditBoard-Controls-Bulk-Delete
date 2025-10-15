@@ -1,0 +1,16 @@
+# AuditBoard Bulk Delete Dependencies
+
+# Core dependencies
+requests>=2.31.0
+PyYAML>=6.0.1
+python-dotenv>=1.0.0
+
+# Optional: For enhanced CLI experience
+colorama>=0.4.6  # Cross-platform colored terminal output
+tqdm>=4.66.0     # Progress bars
+
+# Development dependencies (optional)
+# pytest>=7.4.0
+# pytest-cov>=4.1.0
+# black>=23.0.0
+# flake8>=6.1.0

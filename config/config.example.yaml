@@ -1,0 +1,65 @@
+# AuditBoard Bulk Delete Configuration
+# Copy this file to config.yaml and customize as needed
+
+# AuditBoard API Configuration
+auditboard:
+  # Base URL is typically loaded from environment variable AUDITBOARD_BASE_URL
+  # but can be specified here as well (environment variable takes precedence)
+  # base_url: "https://your-org.auditboardapp.com/api/v1"
+
+  # API token is typically loaded from environment variable AUDITBOARD_API_TOKEN
+  # NEVER commit your actual token to version control!
+  # api_token: "your_token_here"
+
+  # Request timeout in seconds
+  timeout: 30
+
+  # Maximum number of retry attempts for failed requests
+  max_retries: 3
+
+  # Delay between retries in seconds
+  retry_delay: 2.0
+
+# Safety Settings
+safety:
+  # Enable dry-run mode by default (recommended!)
+  # Dry-run shows what WOULD be deleted without actually deleting
+  dry_run_default: true
+
+  # Require explicit confirmation before deleting
+  require_confirmation: true
+
+  # Rate limit delay between deletions (seconds)
+  # Helps avoid API throttling
+  rate_limit_delay: 1.0
+
+  # Countdown warning before live deletion (seconds)
+  countdown_seconds: 5
+
+# Deletion Operation Settings
+deletion:
+  # Number of items to delete in each batch
+  batch_size: 10
+
+  # Pause for rate limiting after every N deletions
+  pause_every_n: 5
+
+  # Save deletion results to JSON files
+  save_results: true
+
+  # Directory for result files
+  results_dir: "results"
+
+# Logging Settings
+logging:
+  # Log level: DEBUG, INFO, WARNING, ERROR, CRITICAL
+  level: "INFO"
+
+  # Log directory
+  log_dir: "results"
+
+  # Enable console output
+  console_output: true
+
+  # Enable file logging
+  file_logging: true
